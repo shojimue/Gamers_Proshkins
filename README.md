@@ -18,10 +18,10 @@
 
 ## Команда проекта
 
-Н**GamersProshkins** работала дружная команда профессианалов.
+Н**GamersProshkins** работала дружная команда профессионалов.
 
 | Роль | Имя |
-|---|---|---|
+|---|---|
 | **Product Owner** | ВТРОЕМ |
 | **Project Manager** | Александр Нагибин |
 | **Team Lead / Backend-разработчик** | Игорь Гомяков |
@@ -33,8 +33,7 @@
 
 ## Пример интерфейса
 
-[![Alt text](<img width="1232" height="783" alt="image" src="https://github.com/user-attachments/assets/9d092f80-a417-48a8-934a-1d9f4ea5241a" />
-)]()
+<img width="1232" height="783" alt="image" src="https://github.com/user-attachments/assets/9d092f80-a417-48a8-934a-1d9f4ea5241a" />
 
 
 ## Как создавалось приложение
