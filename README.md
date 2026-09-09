@@ -33,7 +33,8 @@
 
 ## Пример интерфейса
 
-![Uploading image.png…]()
+[![Alt text](<img width="1232" height="783" alt="image" src="https://github.com/user-attachments/assets/9d092f80-a417-48a8-934a-1d9f4ea5241a" />
+)]()
 
 
 ## Как создавалось приложение
