@@ -1,0 +1,478 @@
+<mxfile host="app.diagrams.net" agent="Gemini" version="24.7.17">
+  <diagram id="GamersProshkinsUML" name="Gamers_Proshkins ER-Class">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" background="#1A1A1A" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ==================== USER (BASE CLASS) ==================== -->
+        <mxCell id="user_class" value="User" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#221F1D;strokeColor=#9E6B73;strokeWidth=1.5;fontColor=#FFF2B2;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="620" y="40" width="280" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="user_attrs" value="&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; id : int&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; username : String&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; email : String&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; passwordHash : String&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; telegramId : String&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; role : UserRole" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#F0F0F0;fontSize=11;html=1;" vertex="1" parent="user_class">
+          <mxGeometry y="28" width="280" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="user_sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#554447;" vertex="1" parent="user_class">
+          <mxGeometry y="124" width="280" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="user_methods" value="&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; User()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; loginJWT()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; logout()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#F0F0F0;fontSize=11;html=1;" vertex="1" parent="user_class">
+          <mxGeometry y="132" width="280" height="58" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== ADMINISTRATOR ==================== -->
+        <mxCell id="admin_class" value="Administrator" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#221F1D;strokeColor=#9E6B73;strokeWidth=1.5;fontColor=#FFF2B2;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="260" y="310" width="260" height="175" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_attrs" value="&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; accessLevel : int&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; lastLogin : DateTime" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#F0F0F0;fontSize=11;html=1;" vertex="1" parent="admin_class">
+          <mxGeometry y="28" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#554447;" vertex="1" parent="admin_class">
+          <mxGeometry y="72" width="260" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_methods" value="&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; Administrator()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; manageCatalog()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; uploadEncryptedKeys()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; createPromoCode()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; moderateReviews()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#F0F0F0;fontSize=11;html=1;" vertex="1" parent="admin_class">
+          <mxGeometry y="80" width="260" height="95" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== CUSTOMER ==================== -->
+        <mxCell id="cust_class" value="Customer" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#221F1D;strokeColor=#9E6B73;strokeWidth=1.5;fontColor=#FFF2B2;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="960" y="310" width="270" height="175" as="geometry" />
+        </mxCell>
+        <mxCell id="cust_attrs" value="&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; bonusBalance : Decimal&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; wishlist : List&amp;lt;Product&amp;gt;&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; notifyTelegram : boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#F0F0F0;fontSize=11;html=1;" vertex="1" parent="cust_class">
+          <mxGeometry y="28" width="270" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="cust_sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#554447;" vertex="1" parent="cust_class">
+          <mxGeometry y="84" width="270" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="cust_methods" value="&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; Customer()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; addToCart()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; createOrder()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; viewPurchasedKeys()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; leaveReview()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#F0F0F0;fontSize=11;html=1;" vertex="1" parent="cust_class">
+          <mxGeometry y="92" width="270" height="83" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== PRODUCT ==================== -->
+        <mxCell id="prod_class" value="Product" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#221F1D;strokeColor=#9E6B73;strokeWidth=1.5;fontColor=#FFF2B2;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="250" y="610" width="280" height="225" as="geometry" />
+        </mxCell>
+        <mxCell id="prod_attrs" value="&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; id : int&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; title : String&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; description : String&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; platform : PlatformEnum&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; genre : String&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; price : Decimal&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; rating : float" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#F0F0F0;fontSize=11;html=1;" vertex="1" parent="prod_class">
+          <mxGeometry y="28" width="280" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="prod_sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#554447;" vertex="1" parent="prod_class">
+          <mxGeometry y="140" width="280" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="prod_methods" value="&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; Product()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; searchByFilter()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; getAvailableStock()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; updateRating()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#F0F0F0;fontSize=11;html=1;" vertex="1" parent="prod_class">
+          <mxGeometry y="148" width="280" height="77" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== ORDER ==================== -->
+        <mxCell id="order_class" value="Order" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#221F1D;strokeColor=#9E6B73;strokeWidth=1.5;fontColor=#FFF2B2;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="960" y="610" width="270" height="225" as="geometry" />
+        </mxCell>
+        <mxCell id="order_attrs" value="&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; id : int&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; orderNumber : String&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; totalAmount : Decimal&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; status : OrderStatus&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; createdAt : DateTime&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; promoCodeId : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#F0F0F0;fontSize=11;html=1;" vertex="1" parent="order_class">
+          <mxGeometry y="28" width="270" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="order_sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#554447;" vertex="1" parent="order_class">
+          <mxGeometry y="124" width="270" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="order_methods" value="&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; Order()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; applyPromoCode()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; reserveKeys()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; deliverKeysAsync()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; changeStatus()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#F0F0F0;fontSize=11;html=1;" vertex="1" parent="order_class">
+          <mxGeometry y="132" width="270" height="93" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== GAME KEY (AES-256) ==================== -->
+        <mxCell id="key_class" value="GameKey" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#221F1D;strokeColor=#9E6B73;strokeWidth=1.5;fontColor=#FFF2B2;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="610" y="615" width="260" height="215" as="geometry" />
+        </mxCell>
+        <mxCell id="key_attrs" value="&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; id : int&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; encryptedCode : byte[]&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; ivVector : byte[]&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; status : KeyStatus&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; soldAt : DateTime" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#F0F0F0;fontSize=11;html=1;" vertex="1" parent="key_class">
+          <mxGeometry y="28" width="260" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="key_sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#554447;" vertex="1" parent="key_class">
+          <mxGeometry y="112" width="260" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="key_methods" value="&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; GameKey()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; encryptAES256()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; decryptAES256()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; markAsSold()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#F0F0F0;fontSize=11;html=1;" vertex="1" parent="key_class">
+          <mxGeometry y="120" width="260" height="95" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== PAYMENT (YOOKASSA) ==================== -->
+        <mxCell id="pay_class" value="Payment" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#221F1D;strokeColor=#9E6B73;strokeWidth=1.5;fontColor=#FFF2B2;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="960" y="940" width="270" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="pay_attrs" value="&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; id : int&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; yookassaPaymentId : String&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; amount : Decimal&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; status : PaymentStatus&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; paidAt : DateTime" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#F0F0F0;fontSize=11;html=1;" vertex="1" parent="pay_class">
+          <mxGeometry y="28" width="270" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="pay_sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#554447;" vertex="1" parent="pay_class">
+          <mxGeometry y="112" width="270" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="pay_methods" value="&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; Payment()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; initTransaction()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; handleWebhook()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; verifySignature()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#F0F0F0;fontSize=11;html=1;" vertex="1" parent="pay_class">
+          <mxGeometry y="120" width="270" height="75" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== PROMOCODE ==================== -->
+        <mxCell id="promo_class" value="PromoCode" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#221F1D;strokeColor=#9E6B73;strokeWidth=1.5;fontColor=#FFF2B2;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="610" y="940" width="260" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="promo_attrs" value="&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; id : int&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; code : String&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; discountPercent : int&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; validUntil : DateTime&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; usageLimit : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#F0F0F0;fontSize=11;html=1;" vertex="1" parent="promo_class">
+          <mxGeometry y="28" width="260" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="promo_sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#554447;" vertex="1" parent="promo_class">
+          <mxGeometry y="112" width="260" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="promo_methods" value="&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; PromoCode()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; isValid()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; calculateDiscount()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#F0F0F0;fontSize=11;html=1;" vertex="1" parent="promo_class">
+          <mxGeometry y="120" width="260" height="75" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== REVIEW ==================== -->
+        <mxCell id="rev_class" value="Review" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#221F1D;strokeColor=#9E6B73;strokeWidth=1.5;fontColor=#FFF2B2;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="250" y="940" width="280" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="rev_attrs" value="&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; id : int&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; rating : int&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; comment : String&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; createdAt : DateTime" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#F0F0F0;fontSize=11;html=1;" vertex="1" parent="rev_class">
+          <mxGeometry y="28" width="280" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="rev_sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#554447;" vertex="1" parent="rev_class">
+          <mxGeometry y="100" width="280" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="rev_methods" value="&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; Review()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; publish()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; deleteReview()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#F0F0F0;fontSize=11;html=1;" vertex="1" parent="rev_class">
+          <mxGeometry y="108" width="280" height="87" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== INHERITANCE ARROWS ==================== -->
+        <mxCell id="inh_admin" value="" style="endArrow=block;endSize=14;endFill=0;html=1;strokeColor=#9E6B73;strokeWidth=1.5;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="admin_class" target="user_class">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="inh_cust" value="" style="endArrow=block;endSize=14;endFill=0;html=1;strokeColor=#9E6B73;strokeWidth=1.5;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="cust_class" target="user_class">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== ASSOCIATIONS & MULTIPLICITIES ==================== -->
+        <!-- Administrator -> Product -->
+        <mxCell id="rel_admin_prod" value="управляет" style="endArrow=none;html=1;strokeColor=#9E6B73;strokeWidth=1.5;fontColor=#F0F0F0;fontSize=11;labelBackgroundColor=#1A1A1A;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="admin_class" target="prod_class">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m_ap_1" value="1" style="text;html=1;align=center;verticalAlign=middle;fontColor=#F0F0F0;fontSize=11;fillColor=#221F1D;strokeColor=#554447;" vertex="1" parent="1">
+          <mxGeometry x="398" y="492" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="m_ap_2" value="0..n" style="text;html=1;align=center;verticalAlign=middle;fontColor=#F0F0F0;fontSize=11;fillColor=#221F1D;strokeColor=#554447;" vertex="1" parent="1">
+          <mxGeometry x="398" y="582" width="30" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Customer -> Order -->
+        <mxCell id="rel_cust_order" value="оформляет" style="endArrow=none;html=1;strokeColor=#9E6B73;strokeWidth=1.5;fontColor=#F0F0F0;fontSize=11;labelBackgroundColor=#1A1A1A;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="cust_class" target="order_class">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m_co_1" value="1" style="text;html=1;align=center;verticalAlign=middle;fontColor=#F0F0F0;fontSize=11;fillColor=#221F1D;strokeColor=#554447;" vertex="1" parent="1">
+          <mxGeometry x="1103" y="492" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="m_co_2" value="0..n" style="text;html=1;align=center;verticalAlign=middle;fontColor=#F0F0F0;fontSize=11;fillColor=#221F1D;strokeColor=#554447;" vertex="1" parent="1">
+          <mxGeometry x="1103" y="582" width="30" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Product -> GameKey -->
+        <mxCell id="rel_prod_key" value="имеет" style="endArrow=none;html=1;strokeColor=#9E6B73;strokeWidth=1.5;fontColor=#F0F0F0;fontSize=11;labelBackgroundColor=#1A1A1A;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="prod_class" target="key_class">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m_pk_1" value="1" style="text;html=1;align=center;verticalAlign=middle;fontColor=#F0F0F0;fontSize=11;fillColor=#221F1D;strokeColor=#554447;" vertex="1" parent="1">
+          <mxGeometry x="536" y="696" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="m_pk_2" value="0..n" style="text;html=1;align=center;verticalAlign=middle;fontColor=#F0F0F0;fontSize=11;fillColor=#221F1D;strokeColor=#554447;" vertex="1" parent="1">
+          <mxGeometry x="574" y="696" width="30" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Order -> GameKey -->
+        <mxCell id="rel_order_key" value="выдаёт" style="endArrow=none;html=1;strokeColor=#9E6B73;strokeWidth=1.5;fontColor=#F0F0F0;fontSize=11;labelBackgroundColor=#1A1A1A;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="order_class" target="key_class">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m_ok_1" value="0..1" style="text;html=1;align=center;verticalAlign=middle;fontColor=#F0F0F0;fontSize=11;fillColor=#221F1D;strokeColor=#554447;" vertex="1" parent="1">
+          <mxGeometry x="924" y="696" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="m_ok_2" value="1..n" style="text;html=1;align=center;verticalAlign=middle;fontColor=#F0F0F0;fontSize=11;fillColor=#221F1D;strokeColor=#554447;" vertex="1" parent="1">
+          <mxGeometry x="876" y="696" width="30" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Order -> Payment -->
+        <mxCell id="rel_order_pay" value="оплачивается через" style="endArrow=none;html=1;strokeColor=#9E6B73;strokeWidth=1.5;fontColor=#F0F0F0;fontSize=11;labelBackgroundColor=#1A1A1A;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="order_class" target="pay_class">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m_op_1" value="1" style="text;html=1;align=center;verticalAlign=middle;fontColor=#F0F0F0;fontSize=11;fillColor=#221F1D;strokeColor=#554447;" vertex="1" parent="1">
+          <mxGeometry x="1103" y="842" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="m_op_2" value="0..1" style="text;html=1;align=center;verticalAlign=middle;fontColor=#F0F0F0;fontSize=11;fillColor=#221F1D;strokeColor=#554447;" vertex="1" parent="1">
+          <mxGeometry x="1103" y="912" width="30" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Order -> PromoCode -->
+        <mxCell id="rel_order_promo" value="применяет" style="endArrow=none;html=1;strokeColor=#9E6B73;strokeWidth=1.5;fontColor=#F0F0F0;fontSize=11;labelBackgroundColor=#1A1A1A;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="order_class" target="promo_class">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m_opr_1" value="0..n" style="text;html=1;align=center;verticalAlign=middle;fontColor=#F0F0F0;fontSize=11;fillColor=#221F1D;strokeColor=#554447;" vertex="1" parent="1">
+          <mxGeometry x="990" y="842" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="m_opr_2" value="0..1" style="text;html=1;align=center;verticalAlign=middle;fontColor=#F0F0F0;fontSize=11;fillColor=#221F1D;strokeColor=#554447;" vertex="1" parent="1">
+          <mxGeometry x="815" y="912" width="30" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Product -> Review -->
+        <mxCell id="rel_prod_rev" value="оценивается в" style="endArrow=none;html=1;strokeColor=#9E6B73;strokeWidth=1.5;fontColor=#F0F0F0;fontSize=11;labelBackgroundColor=#1A1A1A;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="prod_class" target="rev_class">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m_pr_1" value="1" style="text;html=1;align=center;verticalAlign=middle;fontColor=#F0F0F0;fontSize=11;fillColor=#221F1D;strokeColor=#554447;" vertex="1" parent="1">
+          <mxGeometry x="398" y="842" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="m_pr_2" value="0..n" style="text;html=1;align=center;verticalAlign=middle;fontColor=#F0F0F0;fontSize=11;fillColor=#221F1D;strokeColor=#554447;" vertex="1" parent="1">
+          <mxGeometry x="398" y="912" width="30" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Customer -> Review -->
+        <mxCell id="rel_cust_rev" value="оставляет" style="endArrow=none;html=1;strokeColor=#9E6B73;strokeWidth=1.5;fontColor=#F0F0F0;fontSize=11;labelBackgroundColor=#1A1A1A;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="cust_class" target="rev_class">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="570" y="441" />
+              <mxPoint x="570" y="989" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m_cr_1" value="1" style="text;html=1;align=center;verticalAlign=middle;fontColor=#F0F0F0;fontSize=11;fillColor=#221F1D;strokeColor=#554447;" vertex="1" parent="1">
+          <mxGeometry x="932" y="420" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="m_cr_2" value="0..n" style="text;html=1;align=center;verticalAlign=middle;fontColor=#F0F0F0;fontSize=11;fillColor=#221F1D;strokeColor=#554447;" vertex="1" parent="1">
+          <mxGeometry x="536" y="966" width="30" height="20" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+<mxfile host="app.diagrams.net" agent="Gemini" version="24.7.17">
+  <diagram id="GamersProshkinsUML" name="Gamers_Proshkins ER-Class">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" background="#1A1A1A" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ==================== USER (BASE CLASS) ==================== -->
+        <mxCell id="user_class" value="User" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#221F1D;strokeColor=#9E6B73;strokeWidth=1.5;fontColor=#FFF2B2;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="620" y="40" width="280" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="user_attrs" value="&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; id : int&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; username : String&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; email : String&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; passwordHash : String&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; telegramId : String&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; role : UserRole" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#F0F0F0;fontSize=11;html=1;" vertex="1" parent="user_class">
+          <mxGeometry y="28" width="280" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="user_sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#554447;" vertex="1" parent="user_class">
+          <mxGeometry y="124" width="280" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="user_methods" value="&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; User()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; loginJWT()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; logout()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#F0F0F0;fontSize=11;html=1;" vertex="1" parent="user_class">
+          <mxGeometry y="132" width="280" height="58" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== ADMINISTRATOR ==================== -->
+        <mxCell id="admin_class" value="Administrator" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#221F1D;strokeColor=#9E6B73;strokeWidth=1.5;fontColor=#FFF2B2;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="260" y="310" width="260" height="175" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_attrs" value="&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; accessLevel : int&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; lastLogin : DateTime" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#F0F0F0;fontSize=11;html=1;" vertex="1" parent="admin_class">
+          <mxGeometry y="28" width="260" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#554447;" vertex="1" parent="admin_class">
+          <mxGeometry y="72" width="260" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_methods" value="&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; Administrator()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; manageCatalog()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; uploadEncryptedKeys()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; createPromoCode()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; moderateReviews()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#F0F0F0;fontSize=11;html=1;" vertex="1" parent="admin_class">
+          <mxGeometry y="80" width="260" height="95" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== CUSTOMER ==================== -->
+        <mxCell id="cust_class" value="Customer" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#221F1D;strokeColor=#9E6B73;strokeWidth=1.5;fontColor=#FFF2B2;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="960" y="310" width="270" height="175" as="geometry" />
+        </mxCell>
+        <mxCell id="cust_attrs" value="&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; bonusBalance : Decimal&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; wishlist : List&amp;lt;Product&amp;gt;&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; notifyTelegram : boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#F0F0F0;fontSize=11;html=1;" vertex="1" parent="cust_class">
+          <mxGeometry y="28" width="270" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="cust_sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#554447;" vertex="1" parent="cust_class">
+          <mxGeometry y="84" width="270" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="cust_methods" value="&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; Customer()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; addToCart()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; createOrder()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; viewPurchasedKeys()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; leaveReview()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#F0F0F0;fontSize=11;html=1;" vertex="1" parent="cust_class">
+          <mxGeometry y="92" width="270" height="83" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== PRODUCT ==================== -->
+        <mxCell id="prod_class" value="Product" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#221F1D;strokeColor=#9E6B73;strokeWidth=1.5;fontColor=#FFF2B2;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="250" y="610" width="280" height="225" as="geometry" />
+        </mxCell>
+        <mxCell id="prod_attrs" value="&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; id : int&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; title : String&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; description : String&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; platform : PlatformEnum&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; genre : String&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; price : Decimal&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; rating : float" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#F0F0F0;fontSize=11;html=1;" vertex="1" parent="prod_class">
+          <mxGeometry y="28" width="280" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="prod_sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#554447;" vertex="1" parent="prod_class">
+          <mxGeometry y="140" width="280" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="prod_methods" value="&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; Product()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; searchByFilter()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; getAvailableStock()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; updateRating()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#F0F0F0;fontSize=11;html=1;" vertex="1" parent="prod_class">
+          <mxGeometry y="148" width="280" height="77" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== ORDER ==================== -->
+        <mxCell id="order_class" value="Order" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#221F1D;strokeColor=#9E6B73;strokeWidth=1.5;fontColor=#FFF2B2;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="960" y="610" width="270" height="225" as="geometry" />
+        </mxCell>
+        <mxCell id="order_attrs" value="&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; id : int&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; orderNumber : String&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; totalAmount : Decimal&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; status : OrderStatus&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; createdAt : DateTime&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; promoCodeId : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#F0F0F0;fontSize=11;html=1;" vertex="1" parent="order_class">
+          <mxGeometry y="28" width="270" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="order_sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#554447;" vertex="1" parent="order_class">
+          <mxGeometry y="124" width="270" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="order_methods" value="&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; Order()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; applyPromoCode()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; reserveKeys()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; deliverKeysAsync()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; changeStatus()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#F0F0F0;fontSize=11;html=1;" vertex="1" parent="order_class">
+          <mxGeometry y="132" width="270" height="93" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== GAME KEY (AES-256) ==================== -->
+        <mxCell id="key_class" value="GameKey" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#221F1D;strokeColor=#9E6B73;strokeWidth=1.5;fontColor=#FFF2B2;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="610" y="615" width="260" height="215" as="geometry" />
+        </mxCell>
+        <mxCell id="key_attrs" value="&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; id : int&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; encryptedCode : byte[]&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; ivVector : byte[]&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; status : KeyStatus&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; soldAt : DateTime" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#F0F0F0;fontSize=11;html=1;" vertex="1" parent="key_class">
+          <mxGeometry y="28" width="260" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="key_sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#554447;" vertex="1" parent="key_class">
+          <mxGeometry y="112" width="260" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="key_methods" value="&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; GameKey()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; encryptAES256()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; decryptAES256()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; markAsSold()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#F0F0F0;fontSize=11;html=1;" vertex="1" parent="key_class">
+          <mxGeometry y="120" width="260" height="95" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== PAYMENT (YOOKASSA) ==================== -->
+        <mxCell id="pay_class" value="Payment" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#221F1D;strokeColor=#9E6B73;strokeWidth=1.5;fontColor=#FFF2B2;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="960" y="940" width="270" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="pay_attrs" value="&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; id : int&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; yookassaPaymentId : String&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; amount : Decimal&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; status : PaymentStatus&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; paidAt : DateTime" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#F0F0F0;fontSize=11;html=1;" vertex="1" parent="pay_class">
+          <mxGeometry y="28" width="270" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="pay_sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#554447;" vertex="1" parent="pay_class">
+          <mxGeometry y="112" width="270" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="pay_methods" value="&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; Payment()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; initTransaction()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; handleWebhook()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; verifySignature()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#F0F0F0;fontSize=11;html=1;" vertex="1" parent="pay_class">
+          <mxGeometry y="120" width="270" height="75" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== PROMOCODE ==================== -->
+        <mxCell id="promo_class" value="PromoCode" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#221F1D;strokeColor=#9E6B73;strokeWidth=1.5;fontColor=#FFF2B2;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="610" y="940" width="260" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="promo_attrs" value="&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; id : int&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; code : String&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; discountPercent : int&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; validUntil : DateTime&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; usageLimit : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#F0F0F0;fontSize=11;html=1;" vertex="1" parent="promo_class">
+          <mxGeometry y="28" width="260" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="promo_sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#554447;" vertex="1" parent="promo_class">
+          <mxGeometry y="112" width="260" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="promo_methods" value="&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; PromoCode()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; isValid()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; calculateDiscount()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#F0F0F0;fontSize=11;html=1;" vertex="1" parent="promo_class">
+          <mxGeometry y="120" width="260" height="75" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== REVIEW ==================== -->
+        <mxCell id="rev_class" value="Review" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#221F1D;strokeColor=#9E6B73;strokeWidth=1.5;fontColor=#FFF2B2;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="250" y="940" width="280" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="rev_attrs" value="&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; id : int&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; rating : int&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; comment : String&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; createdAt : DateTime" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#F0F0F0;fontSize=11;html=1;" vertex="1" parent="rev_class">
+          <mxGeometry y="28" width="280" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="rev_sep" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#554447;" vertex="1" parent="rev_class">
+          <mxGeometry y="100" width="280" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="rev_methods" value="&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; Review()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; publish()&lt;br&gt;&lt;font color=&quot;#79B8FF&quot;&gt;◆&lt;/font&gt; deleteReview()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingRight=8;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#F0F0F0;fontSize=11;html=1;" vertex="1" parent="rev_class">
+          <mxGeometry y="108" width="280" height="87" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== INHERITANCE ARROWS ==================== -->
+        <mxCell id="inh_admin" value="" style="endArrow=block;endSize=14;endFill=0;html=1;strokeColor=#9E6B73;strokeWidth=1.5;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="admin_class" target="user_class">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="inh_cust" value="" style="endArrow=block;endSize=14;endFill=0;html=1;strokeColor=#9E6B73;strokeWidth=1.5;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="cust_class" target="user_class">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ==================== ASSOCIATIONS & MULTIPLICITIES ==================== -->
+        <!-- Administrator -> Product -->
+        <mxCell id="rel_admin_prod" value="управляет" style="endArrow=none;html=1;strokeColor=#9E6B73;strokeWidth=1.5;fontColor=#F0F0F0;fontSize=11;labelBackgroundColor=#1A1A1A;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="admin_class" target="prod_class">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m_ap_1" value="1" style="text;html=1;align=center;verticalAlign=middle;fontColor=#F0F0F0;fontSize=11;fillColor=#221F1D;strokeColor=#554447;" vertex="1" parent="1">
+          <mxGeometry x="398" y="492" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="m_ap_2" value="0..n" style="text;html=1;align=center;verticalAlign=middle;fontColor=#F0F0F0;fontSize=11;fillColor=#221F1D;strokeColor=#554447;" vertex="1" parent="1">
+          <mxGeometry x="398" y="582" width="30" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Customer -> Order -->
+        <mxCell id="rel_cust_order" value="оформляет" style="endArrow=none;html=1;strokeColor=#9E6B73;strokeWidth=1.5;fontColor=#F0F0F0;fontSize=11;labelBackgroundColor=#1A1A1A;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="cust_class" target="order_class">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m_co_1" value="1" style="text;html=1;align=center;verticalAlign=middle;fontColor=#F0F0F0;fontSize=11;fillColor=#221F1D;strokeColor=#554447;" vertex="1" parent="1">
+          <mxGeometry x="1103" y="492" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="m_co_2" value="0..n" style="text;html=1;align=center;verticalAlign=middle;fontColor=#F0F0F0;fontSize=11;fillColor=#221F1D;strokeColor=#554447;" vertex="1" parent="1">
+          <mxGeometry x="1103" y="582" width="30" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Product -> GameKey -->
+        <mxCell id="rel_prod_key" value="имеет" style="endArrow=none;html=1;strokeColor=#9E6B73;strokeWidth=1.5;fontColor=#F0F0F0;fontSize=11;labelBackgroundColor=#1A1A1A;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="prod_class" target="key_class">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m_pk_1" value="1" style="text;html=1;align=center;verticalAlign=middle;fontColor=#F0F0F0;fontSize=11;fillColor=#221F1D;strokeColor=#554447;" vertex="1" parent="1">
+          <mxGeometry x="536" y="696" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="m_pk_2" value="0..n" style="text;html=1;align=center;verticalAlign=middle;fontColor=#F0F0F0;fontSize=11;fillColor=#221F1D;strokeColor=#554447;" vertex="1" parent="1">
+          <mxGeometry x="574" y="696" width="30" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Order -> GameKey -->
+        <mxCell id="rel_order_key" value="выдаёт" style="endArrow=none;html=1;strokeColor=#9E6B73;strokeWidth=1.5;fontColor=#F0F0F0;fontSize=11;labelBackgroundColor=#1A1A1A;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="order_class" target="key_class">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m_ok_1" value="0..1" style="text;html=1;align=center;verticalAlign=middle;fontColor=#F0F0F0;fontSize=11;fillColor=#221F1D;strokeColor=#554447;" vertex="1" parent="1">
+          <mxGeometry x="924" y="696" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="m_ok_2" value="1..n" style="text;html=1;align=center;verticalAlign=middle;fontColor=#F0F0F0;fontSize=11;fillColor=#221F1D;strokeColor=#554447;" vertex="1" parent="1">
+          <mxGeometry x="876" y="696" width="30" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Order -> Payment -->
+        <mxCell id="rel_order_pay" value="оплачивается через" style="endArrow=none;html=1;strokeColor=#9E6B73;strokeWidth=1.5;fontColor=#F0F0F0;fontSize=11;labelBackgroundColor=#1A1A1A;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="order_class" target="pay_class">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m_op_1" value="1" style="text;html=1;align=center;verticalAlign=middle;fontColor=#F0F0F0;fontSize=11;fillColor=#221F1D;strokeColor=#554447;" vertex="1" parent="1">
+          <mxGeometry x="1103" y="842" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="m_op_2" value="0..1" style="text;html=1;align=center;verticalAlign=middle;fontColor=#F0F0F0;fontSize=11;fillColor=#221F1D;strokeColor=#554447;" vertex="1" parent="1">
+          <mxGeometry x="1103" y="912" width="30" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Order -> PromoCode -->
+        <mxCell id="rel_order_promo" value="применяет" style="endArrow=none;html=1;strokeColor=#9E6B73;strokeWidth=1.5;fontColor=#F0F0F0;fontSize=11;labelBackgroundColor=#1A1A1A;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="order_class" target="promo_class">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m_opr_1" value="0..n" style="text;html=1;align=center;verticalAlign=middle;fontColor=#F0F0F0;fontSize=11;fillColor=#221F1D;strokeColor=#554447;" vertex="1" parent="1">
+          <mxGeometry x="990" y="842" width="30" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="m_opr_2" value="0..1" style="text;html=1;align=center;verticalAlign=middle;fontColor=#F0F0F0;fontSize=11;fillColor=#221F1D;strokeColor=#554447;" vertex="1" parent="1">
+          <mxGeometry x="815" y="912" width="30" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Product -> Review -->
+        <mxCell id="rel_prod_rev" value="оценивается в" style="endArrow=none;html=1;strokeColor=#9E6B73;strokeWidth=1.5;fontColor=#F0F0F0;fontSize=11;labelBackgroundColor=#1A1A1A;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="prod_class" target="rev_class">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m_pr_1" value="1" style="text;html=1;align=center;verticalAlign=middle;fontColor=#F0F0F0;fontSize=11;fillColor=#221F1D;strokeColor=#554447;" vertex="1" parent="1">
+          <mxGeometry x="398" y="842" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="m_pr_2" value="0..n" style="text;html=1;align=center;verticalAlign=middle;fontColor=#F0F0F0;fontSize=11;fillColor=#221F1D;strokeColor=#554447;" vertex="1" parent="1">
+          <mxGeometry x="398" y="912" width="30" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Customer -> Review -->
+        <mxCell id="rel_cust_rev" value="оставляет" style="endArrow=none;html=1;strokeColor=#9E6B73;strokeWidth=1.5;fontColor=#F0F0F0;fontSize=11;labelBackgroundColor=#1A1A1A;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="cust_class" target="rev_class">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="570" y="441" />
+              <mxPoint x="570" y="989" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m_cr_1" value="1" style="text;html=1;align=center;verticalAlign=middle;fontColor=#F0F0F0;fontSize=11;fillColor=#221F1D;strokeColor=#554447;" vertex="1" parent="1">
+          <mxGeometry x="932" y="420" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="m_cr_2" value="0..n" style="text;html=1;align=center;verticalAlign=middle;fontColor=#F0F0F0;fontSize=11;fillColor=#221F1D;strokeColor=#554447;" vertex="1" parent="1">
+          <mxGeometry x="536" y="966" width="30" height="20" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
